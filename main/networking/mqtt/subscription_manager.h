@@ -31,6 +31,10 @@
 #ifndef SUBSCRIPTION_MANAGER_H
 #define SUBSCRIPTION_MANAGER_H
 
+#ifdef __cplusplus
+    extern "C" {
+#endif
+
 /* core MQTT include. */
 #include "core_mqtt.h"
 
@@ -118,5 +122,9 @@ void removeSubscription( SubscriptionElement_t * pxSubscriptionList,
  */
 bool handleIncomingPublishes( SubscriptionElement_t * pxSubscriptionList,
                               MQTTPublishInfo_t * pxPublishInfo );
+
+#ifdef __cplusplus
+    }
+#endif
 
 #endif /* SUBSCRIPTION_MANAGER_H */
