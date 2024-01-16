@@ -27,6 +27,10 @@
 #ifndef CORE_MQTT_AGENT_NETWORK_MANAGER_H
 #define CORE_MQTT_AGENT_NETWORK_MANAGER_H
 
+#ifdef __cplusplus
+  extern "C" {
+#endif
+
 #include "network_transport.h"
 #include "freertos/FreeRTOS.h"
 #include "esp_event.h"
@@ -61,5 +65,9 @@ BaseType_t xCoreMqttAgentManagerStart( NetworkContext_t * pxNetworkContextIn );
  * @return pdPASS if successful, pdFAIL otherwise.
  */
 BaseType_t xCoreMqttAgentManagerPost( int32_t lEventId );
+
+#ifdef __cplusplus
+    }
+#endif
 
 #endif /* CORE_MQTT_AGENT_NETWORK_MANAGER_H */
