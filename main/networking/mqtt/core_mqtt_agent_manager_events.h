@@ -27,6 +27,10 @@
 #ifndef CORE_MQTT_AGENT_MANAGER_EVENTS_H
 #define CORE_MQTT_AGENT_MANAGER_EVENTS_H
 
+#ifdef __cplusplus
+    extern "C" {
+#endif
+
 #include "esp_event.h"
 
 ESP_EVENT_DECLARE_BASE( CORE_MQTT_AGENT_EVENT );
@@ -38,5 +42,9 @@ enum
     CORE_MQTT_AGENT_OTA_STARTED_EVENT,
     CORE_MQTT_AGENT_OTA_STOPPED_EVENT
 };
+
+#ifdef __cplusplus
+    }
+#endif
 
 #endif /* CORE_MQTT_AGENT_MANAGER_EVENTS_H */
